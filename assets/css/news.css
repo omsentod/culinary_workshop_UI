@@ -1,0 +1,8 @@
+h1, h2, h3, h4, h5, h6, .h01, .h02, .h03, .h04, .h05, .h06 {
+	color: var(--main-color);
+	font-style: normal;
+}
+
+input, textarea, select, pre, blockquote, figure, table, p, ul, ol, dl, form, .fluid-video-wrapper, .ss-custom-select {
+    color: var(--text-color);
+}
