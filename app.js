@@ -19,57 +19,57 @@ document.addEventListener("DOMContentLoaded", function() {
         {
             id: 1,
             name: 'Fresh Chicken Veggies',
-            image: '4.png',
-            price: 49.000,
+            image: '1.png',
+            price: 49000,
             calories: '120 calories',
             rate: 5,
-            cat: 'lunch' ,// Bisa diisi sesuka hati
-            link: 'dish-detail.html?id=1' // Contoh URL untuk detail makanan ini
+            cat: 'lunch',
+            link: 'dish-detail.html?id=1'
         },
         {
             id: 2,
             name: 'Grilled Chicken',
             image: '2.png',
-            price: 55.000,
+            price: 55000,
             calories: '150 calories',
             rate: 5,
-            cat: 'breakfast' // Bisa diisi sesuka hati
+            cat: 'breakfast'
         },
         {
             id: 3,
             name: 'Panner Noddles',
             image: '3.png',
-            price: 80.000,
+            price: 80000,
             calories: '120 calories',
             rate: 5,
-            cat: 'dinner' // Bisa diisi sesuka hati
+            cat: 'dinner'
         },
         {
             id: 4,
-            name: 'Panner Noddles',
-            image: '3.png',
-            price: 80.000,
+            name: 'Meat Lover Noddles',
+            image: '4.png',
+            price: 80000,
             calories: '120 calories',
             rate: 5,
-            cat: 'dinner' // Bisa diisi sesuka hati
+            cat: 'dinner'
         },
         {
             id: 5,
-            name: 'Panner Noddles',
-            image: '3.png',
-            price: 80.000,
+            name: 'Veg Fresh Salads',
+            image: '5.png',
+            price: 80000,
             calories: '120 calories',
             rate: 5,
-            cat: 'dinner' // Bisa diisi sesuka hati
+            cat: 'dinner'
         },
         {
             id: 6,
-            name: 'Panner Noddles',
-            image: '3.png',
-            price: 80.000,
+            name: 'Spring Chicken Fried Rice ',
+            image: '6.png',
+            price: 80000,
             calories: '120 calories',
             rate: 5,
-            cat: 'dinner' // Bisa diisi sesuka hati
+            cat: 'dinner'
         },
         // Add more products as needed
     ];
@@ -79,8 +79,8 @@ document.addEventListener("DOMContentLoaded", function() {
     function initApp() {
         products.forEach((value, key) => {
             let newDiv = document.createElement('div');
-            newDiv.classList.add('col-lg-4', 'col-sm-6', 'dish-box-wp', value.cat); // Gunakan value.cat
-            newDiv.dataset.cat = value.cat; // Gunakan value.cat
+            newDiv.classList.add('col-lg-4', 'col-sm-6', 'dish-box-wp', value.cat); // Use value.cat
+            newDiv.dataset.cat = value.cat; // Use value.cat
             newDiv.innerHTML = `
             <div class="dish-box text-center">
                 <div class="dist-img">
@@ -112,12 +112,10 @@ document.addEventListener("DOMContentLoaded", function() {
                             <b>$ ${value.price.toLocaleString()}</b>
                         </li>
                         <li>
-                        <a class="btn btn-warning" href="${value.link}" role="button">Details</a>
-
+                            <a class="btn btn-warning" href="${value.link}" role="button">Details</a>
                             <button class="dish-add-btn" onclick="addToCard(${key})">
                                 <i class="uil uil-plus"></i>
                             </button>
-                         
                         </li>
                     </ul>
                 </div>
@@ -128,7 +126,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     window.addToCard = function(key) {
         if (!listCards[key]) {
-            listCards[key] = {...products[key], quantity: 1};
+            listCards[key] = { ...products[key], quantity: 1 };
         } else {
             listCards[key].quantity += 1;
         }
@@ -159,7 +157,14 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        total.innerText = `$ ${totalPrice.toLocaleString()}`;
+        let taxRate = 0.10;
+        let taxAmount = totalPrice * taxRate;
+        let totalWithTax = totalPrice + taxAmount;
+
+        document.querySelector('.order-calculate p:nth-child(1) span').innerText = totalPrice.toLocaleString();
+        document.querySelector('.order-calculate p:nth-child(2) span').innerText = count;
+        document.querySelector('.order-calculate p:nth-child(4) span').innerText = totalWithTax.toLocaleString();
+        total.innerText = `Pay $ ${totalWithTax.toLocaleString()}`;
         quantity.innerText = count;
     }
 

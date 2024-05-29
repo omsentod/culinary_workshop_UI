@@ -1901,11 +1901,13 @@ p {
     top:0;
     left: 100%;
     width: 500px;
-    background-color: #453E3B;
+    background-color: #111111;
     height: 100vh;
     transition: 0.5s;
     z-index: 105;
 }
+
+
 .active .card{
     left: calc(100% - 500px);
 }
@@ -1914,12 +1916,14 @@ p {
 }
 .card h1{
     color: #E8BC0E;
-    font-weight: 100;
-    margin: 0;
-    padding: 0 20px;
-    height: 80px;
-    display: flex;
-    align-items: center;
+font-weight: 100;
+margin: 0;
+padding: 0 20px;
+height: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
 }
 .card .checkOut{
     position: absolute;
@@ -1943,10 +1947,47 @@ p {
     background-color: #1C1F25;
     color: #fff;
 }
+
+.listCard{
+    height: 350px;
+    width: 96%;
+    overflow-y: scroll;
+    margin: 20px 10px 0 10px ;
+    background-color: #E8BC0E;
+    border: 2px solid #0504043f;
+    border-radius: 10px;
+}
+
+.divider{
+    width: 100%;
+    border: 1px dashed var(--main-color);
+}
+.order-calculate > p {
+    color: var(--text-color);
+    font-style: italic;
+    margin: 0 10px 10px 10px;
+}
+
+.order-calculate > p > span{
+    float: right;
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+.listCard::-webkit-scrollbar {
+    width: 10px;
+    background-color: rgba(179, 192, 179, 0.625);
+}
+    
+ .listCard::-webkit-scrollbar-thumb {
+    background-color: var(--text-color);
+    border-radius: 5px;
+}
+
 .listCard li{
     display: grid;
     grid-template-columns: 100px repeat(3, 1fr);
-    color: #fff;
+    color: var(--bg-color);
     row-gap: 10px;
 }
 .listCard li div{
@@ -1955,7 +1996,8 @@ p {
     align-items: center;
 }
 .listCard li img{
-    width: 90%;
+    margin: 10px 0 10px;
+    width: 50%;
 }
 .listCard li button{
     background-color: #fff5;
@@ -2156,7 +2198,7 @@ p.lead {
     color: var(--main-color);}
 
 .post-thumb {
-    margin: 3.0vw 0 0 7.0vw ;
+    margin: 10rem 0 0 7.0vw ;
 }
 
 .custom-thumb-img{
@@ -2170,14 +2212,15 @@ p.lead {
 
 
 
+
 /* ===================================================================
  *  05. forms - (_forms.scss)
  *
  * ------------------------------------------------------------------- */
 
  .respond {
-    max-width: 800px; /* Atur lebar maksimal untuk bagian komentar */
-    margin: 0 auto; /* Pusatkan bagian komentar */
+    max-width: 500px; /* Atur lebar maksimal untuk bagian komentar */
+    margin: 5rem auto; /* Pusatkan bagian komentar */
     padding: 2rem; /* Tambahkan padding agar ada ruang di sekitar teks */
     background-color: #f9f9f9; /* Tambahkan latar belakang untuk memisahkan dari konten lain */
     border-radius: 10px; /* Tambahkan sedikit border-radius untuk tampilan yang lebih halus */
@@ -2189,30 +2232,6 @@ p.lead {
     border-color: var(--text-color);
 }
 
-/* Untuk memastikan elemen input mengambil seluruh lebar kontainer induknya */
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="text"],
-input[type="tel"],
-input[type="url"],
-input[type="password"],
-textarea {
-    display: block;
-    width: 100%; /* Mengambil seluruh lebar kontainer induk */
-    height: 6rem;
-    padding: 1.5rem 2.5rem;
-    border: 0;
-    outline: none;
-    color: var(--text-color);
-    font-family: "roboto-regular", sans-serif;
-    font-size: 1.5rem;
-    line-height: 3rem;
-    max-width: 100%; /* Memastikan elemen tidak melebihi lebar kontainer induk */
-    background: rgba(0, 0, 0, 0.1);
-    box-sizing: border-box; /* Menghitung padding dan border dalam ukuran total elemen */
-    transition: all 0.3s ease-in-out;
-}
 
 /* Form Field */
 .form-field {
