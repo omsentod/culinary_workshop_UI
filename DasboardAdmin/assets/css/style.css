@@ -19,11 +19,10 @@
 body {
   font-family: "Open Sans", sans-serif;
   background: var(--bg-color);
-  color: var(--main-color);
 }
 
 a {
-  color: #4154f1;
+  color: var(--text-color);
   text-decoration: none;
 }
 
@@ -225,7 +224,9 @@ h6 {
   border: none;
   border-radius: 5px;
   box-shadow: 0px 0 30px rgba(1, 41, 112, 0.1);
+  overflow-x: scroll;
 }
+
 
 .card-header,
 .card-footer {
@@ -237,10 +238,10 @@ h6 {
 
 .card-title {
   padding: 20px 0 15px 0;
-  font-size: 18px;
-  font-weight: 500;
-  color: #012970;
-  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color:var(--bg-color) ;
+
 }
 
 .card-title span {
@@ -375,18 +376,18 @@ h6 {
 .logo span {
   font-size: 26px;
   font-weight: 700;
-  color: #012970;
+  color: var(--text-color);
   font-family: "Nunito", sans-serif;
 }
 
 .header {
   transition: all 0.5s;
   z-index: 997;
-  height: 60px;
+  height: 80px;
   box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
-  background-color: var(--text-color);
   opacity: 12;
   padding-left: 20px;
+  background-color: var(--bg-color);
   /* Toggle Sidebar Button */
   /* Search Bar */
 }
@@ -472,13 +473,13 @@ h6 {
 
 .header-nav .nav-icon {
   font-size: 22px;
-  color: #012970;
+  color: #ffff;
   margin-right: 25px;
   position: relative;
 }
 
 .header-nav .nav-profile {
-  color: #012970;
+  color: var(--text-color);
 }
 
 .header-nav .nav-profile img {
@@ -603,18 +604,16 @@ h6 {
 --------------------------------------------------------------*/
 .sidebar {
   position: fixed;
-  top: 60px;
+  top: 0;
   left: 0;
   bottom: 0;
   width: 300px;
-  z-index: 996;
+  z-index: 1000;
   transition: all 0.3s;
   padding: 20px;
   overflow-y: auto;
   scrollbar-width: thin;
-  scrollbar-color: var(--bg-color) transparent;
-  box-shadow: 0px 0px 20px rgba(1, 41, 112, 0.1);
-  background-color: var(--main-color);
+  scrollbar-color: var(--bg-color) ;
 }
 
 @media (max-width: 1199px) {
@@ -626,7 +625,7 @@ h6 {
 .sidebar::-webkit-scrollbar {
   width: 5px;
   height: 8px;
-  background-color: #fff;
+  background-color: var(--bg-color);
 }
 
 .sidebar::-webkit-scrollbar-thumb {
@@ -644,8 +643,27 @@ h6 {
 @media (max-width: 1199px) {
   .toggle-sidebar .sidebar {
     left: 0;
+    background-color: var(--bg-color);
+    width: 100%;
+    height: 100%;
+  }
+
+  .sidebar.active {
+    display: block;
+  }
+
+  .close-sidebar {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
   }
 }
+
 
 @media (min-width: 1200px) {
 
@@ -657,7 +675,51 @@ h6 {
   .toggle-sidebar .sidebar {
     left: -300px;
   }
+
+
+  .close-sidebar {
+    display: none;
+  }
 }
+.close-sidebar {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.logo-side{
+  padding: 20px;
+}
+
+/* logo */
+.logo{
+
+  font-size: 25px;
+  color: transparent;
+  font-weight: 800;
+  /* Centering methods (choose one): */
+  /* Method 1: Using flexbox */
+  align-self: flex-end;
+  margin: auto;
+  color: var(--text-color);
+}
+
+.logo:hover{
+  color: #ed3c0d;
+  transform: translateY(10px);
+  transition: all .50s ease;
+
+}
+
+.logo span{
+  color:var(--main-color);
+}
+/* logo */
 
 .sidebar-nav {
   padding: 0;
@@ -667,7 +729,7 @@ h6 {
 
 .sidebar-nav li {
   padding: 0;
-  margin: 0;
+  margin-top: 20px ;
   list-style: none;
 }
 
@@ -711,12 +773,12 @@ h6 {
 }
 
 .sidebar-nav .nav-link:hover {
-  color: #4154f1;
-  background: #f6f9ff;
+  color: var(--bg-color);
+  background: var(--main-color);
 }
 
 .sidebar-nav .nav-link:hover i {
-  color: #4154f1;
+  color: var(--bg-color);
 }
 
 .sidebar-nav .nav-link .bi-chevron-down {
@@ -797,6 +859,8 @@ h6 {
   margin-bottom: 0;
   padding: 0;
 }
+
+
 
 .dashboard .filter .dropdown-item {
   padding: 8px 15px;
@@ -1226,12 +1290,180 @@ h6 {
 
 .footer .copyright {
   text-align: center;
-  color: #012970;
+  color: var(--main-color);
 }
 
 .footer .credits {
   padding-top: 5px;
   text-align: center;
   font-size: 13px;
-  color: #012970;
+  color: var(--text-color);
+}
+
+.table img {
+  max-width: 100px; /* Atur lebar maksimum gambar */
+  height: auto; /* Atur tinggi otomatis agar tetap proporsional */
+  border-radius: 8px; /* Menambahkan radius untuk sudut */
+  border: 1px solid #ccc; /* Menambahkan border */
+  padding: 5px; /* Menambahkan padding */
+}
+
+.table-article img {
+  max-width: 200px; /* Atur lebar maksimum gambar */
+  height: auto; /* Atur tinggi otomatis agar tetap proporsional */
+  border-radius: 8px; /* Menambahkan radius untuk sudut */
+  border: 1px solid #ccc; /* Menambahkan border */
+  padding: 5px; /* Menambahkan padding */
+}
+
+
+
+.datatable-table th button, .datatable-pagination-list button {
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.table-article .btn-move{
+  display: flex;
+  justify-content: space-between;
+  white-space: nowrap;
+  margin-right: 5px;
+}
+
+.btn-cell {
+  white-space: nowrap;
+  /* Agar tombol tidak pindah ke baris berikutnya */
+}
+
+.btn-cell button {
+  margin-right: 5px;
+  /* Memberikan jarak antara tombol */
+}
+
+.details .recentOrders table tr:last-child,
+.details2 .recentOrders table tr:last-child,
+.details3 .recentOrders table tr:last-child,
+.details4 .recentOrders table tr:last-child {
+  border-bottom: none;
+}
+
+.details .recentOrders table tbody tr:hover,
+.details2 .recentOrders table tbody tr:hover,
+.details3 .recentOrders table tbody tr:hover,
+.details4 .recentOrders table tbody tr:hover {
+  background: var(--other-color);
+  color: var(--main-color);
+}
+
+.dashDetails .dashRecentOrders table tr td,
+.details .recentOrders table tr td,
+.details2 .recentOrders table tr td,
+.details3 .recentOrders table tr td,
+.details4 .recentOrders table tr td {
+  padding: 10px;
+}
+
+.details .recentOrders table tr td:last-child,
+.details2 .recentOrders table tr td:last-child,
+.details4 .recentOrders table tr td:last-child {
+  text-align: center;
+}
+
+/* .details .recentOrders table tr td:nth-child(2) */
+.details2 .recentOrders table tr td:nth-child(2) {
+  text-align: center;
+}
+
+/* .details .recentOrders table tr td:nth-child(3), */
+.details2 .recentOrders table tr td:nth-child(3),
+.details4 .recentOrders table tr td:nth-child(3) {
+  text-align: center;
+}
+
+.details .recentOrders table tr td:nth-child(4),
+.details2 .recentOrders table tr td:nth-child(4),
+.details4 .recentOrders table tr td:nth-child(4) {
+  text-align: center;
+}
+
+.details .recentOrders table tr td:nth-child(5),
+.details2 .recentOrders table tr td:nth-child(5), 
+.details4 .recentOrders table tr td:nth-child(5) {
+  text-align: center;
+
+}
+
+.details2 .recentOrders table tr td:nth-child(1),
+.details3 .recentOrders table tr td:nth-child(1),
+.details4 .recentOrders table tr td:nth-child(1) {
+  text-align: center;
+}
+
+.details3 .recentOrders table tr td:nth-child(2),
+.details3 .recentOrders table tr td:nth-child(3),
+.details3 .recentOrders table tr td:nth-child(4),
+.details3 .recentOrders table tr td:nth-child(5) {
+  text-align: justify;
+}
+
+.details2 .recentOrders table tr td:nth-child(2) img {
+  width: 90px;
+  /* Ubah lebar gambar sesuai kebutuhan */
+  height: auto;
+  /* Biarkan tinggi gambar menyesuaikan dengan lebar */
+}
+
+.details2 .recentOrders table tr td:nth-child(5) {
+  max-width: 500px;
+  /* Atur lebar maksimum untuk kolom deskripsi */
+  overflow: hidden;
+  /* Sembunyikan konten yang melebihi lebar maksimum */
+  text-overflow: ellipsis;
+  /* Tambahkan titik elipsis untuk menandakan teks yang dipotong */
+  white-space: nowrap;
+  /* Hindari pemisahan baris */
+}
+
+.details4 .recentOrders table tr td:nth-child(2) {
+  max-width: 90px;
+  /* Atur lebar maksimum untuk kolom deskripsi */
+}
+
+.datatable-table > thead > tr > th {
+  border-radius: 20px;
+  background-color: var(--bg-color);
+  vertical-align: super;
+  text-align: left;
+  border-bottom: 1px solid #d9d9d9;
+}
+
+
+.datatable-table th button, .datatable-pagination-list button {
+  color: white;
+  border-radius: 10px;
+  padding: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+.card-body .datatable-table {
+	border-spacing: 2px;
+	border-collapse: separate;
+}
+
+.datatable-table > tbody > tr > td,
+.datatable-table > tbody > tr > th,
+.datatable-table > tfoot > tr > td,
+.datatable-table > tfoot > tr > th,
+.datatable-table > thead > tr > td,
+.datatable-table > thead > tr > th {
+	vertical-align: top;
+	padding: 8px 10px;
 }

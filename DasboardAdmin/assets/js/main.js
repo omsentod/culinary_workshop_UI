@@ -319,3 +319,20 @@
   }
 
 })();
+
+document.addEventListener('DOMContentLoaded', function() {
+  var sidebar = document.getElementById('sidebar');
+  var closeBtn = document.getElementById('close-sidebar');
+  
+  closeBtn.addEventListener('click', function() {
+    sidebar.classList.remove('active');
+  });
+
+  // Optionally, you can add a button to open the sidebar
+  var openBtn = document.getElementById('open-sidebar');
+  if (openBtn) {
+    openBtn.addEventListener('click', function() {
+      sidebar.classList.add('active');
+    });
+  }
+});

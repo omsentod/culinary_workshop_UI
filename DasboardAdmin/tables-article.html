@@ -271,54 +271,52 @@
   </header><!-- End Header -->
 
   <!-- ======= Sidebar ======= -->
-  
+<aside id="sidebar" class="sidebar">
+  <div class="logo-side">
+    <a href="#" class="logo">Culinary<span>Sanctuary</span></a>
+    <a href="tables-article.html"><button id="close-sidebar" class="close-sidebar">&times;</button></a>
+  </div>
 
-  <aside id="sidebar" class="sidebar">
-    <div class="logo-side">
-      <a href="#" class="logo">Culinary<span>Sanctuary</span></a>
-    </div>
+  <ul class="sidebar-nav" id="sidebar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">
+        <i class="bi bi-grid"></i>
+        <span>Dashboard</span>
+      </a>
+    </li>
+    <!-- End Dashboard Nav -->
+    <li class="nav-item">
+      <a class="nav-link" href="tables-user.html">
+        <i class="bi bi-people-fill"></i>
+      <span>User</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="tables-products.html">
+        <i class="bi bi-bag-fill"></i>
+        <span>Product</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="tables-article.html">
+        <i class="bi bi-pencil"></i>
+        <span>Article</span>
+      </a>
+    </li>
+   
 
-    <ul class="sidebar-nav" id="sidebar-nav">
-      <li class="nav-item">
-        <a class="nav-link " href="index.html">
-          <i class="bi bi-grid"></i>
-          <span>Dashboard</span>
-        </a>
-      </li><!-- End Dashboard Nav -->
-      
-     <li class="nav-item">
-  <a class="nav-link" href="tables-user.html">
-    <i class="bi bi-people-fill"></i>
-  <span>User</span>
-  </a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="tables-products.html">
-    <i class="bi bi-bag-fill"></i>
-    <span>Product</span>
-  </a>
-</li>
-<li class="nav-item">
-  <a class="nav-link" href="tables-article.html">
-    <i class="bi bi-pencil"></i>
-    <span>Article</span>
-  </a>
-</li>
-      </li><!-- End Charts Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link " href="tables-trans.html">
-          <i class="bi bi-receipt-cutoff"></i>
-          <span>Transaction</span>
-        </a>
-      </li><!-- End Icons Nav -->
-
-     
-
-    </ul>
-
-  </aside><!-- End Sidebar-->
-
+    <!-- End Charts Nav -->
+    <li class="nav-item">
+      <a class="nav-link" href="tables-trans.html">
+        <i class="bi bi-receipt-cutoff"></i>
+        <span>Transaction</span>
+      </a>
+    </li>
+    <!-- End Icons Nav -->
+  </ul>
+</aside>
+<!-- End Sidebar -->
   <main id="main" class="main">
 
     <div class="pagetitle">
@@ -337,89 +335,121 @@
 
           <div class="card">
             <div class="card-body">
-              <h1 class="card-title">Data Product</h1>
+              <h1 class="card-title">Data Article</h1>
               <button type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#addProductModal">
-                Add Product
+                Add Article
             </button>
 
-              <!-- Table with stripped rows -->
-              <table class="table datatable">
+              <!--
+              <table class="table-article datatable">
                 <thead>
                   <tr>
-                    <th class="head" scope="col">No</th>
-                    <th class="head" scope="col">Name Produt</th>
-                    <th class="head" scope="col">Category</th>
-                    <th class="head" scope="col">Product Picture</th>
-                    <th class="head" scope="col">Stock</th>
-                    <th class="head" scope="col">Action</th>
+                    <th scope="col">No</th>
+                    <th scope="col">Article Picture</th>
+                    <th scope="col">Article Heading</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Text</th>
+                    <th scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">1</th>
+                    <td>1</td>
+                    <td> <img src="file:///Users/macbook/Documents/laravelz/culinary_workshop_UI/assets/images/blog/blog2.jpg" alt=""></td>
                     <td>Brandon Jacob</td>
                     <td>Designer</td>
-                    <td> <img src="file:///Users/macbook/Documents/laravelz/culinary_workshop_UI/assets/images/dish/1.png" alt=""></td>
-                    <td>208</td>
+                    <td>Pentingnya Nutrisi Seimbang
+                        Dalam kehidupan sehari-hari, kita membutuhkan asupan nutrisi yang seimbang untuk menjaga kesehatan dan kebugaran tubuh. Makanan yang kaya akan protein, karbohidrat, lemak, vitamin, dan mineral sangat penting bagi pertumbuhan dan perkembangan. Mengonsumsi makanan yang beragam dapat memenuhi kebutuhan nutrisi tubuh secara menyeluruh.</td>
                     <td>
-                    <a href=""><button
+                        
+                    <a href="">
+                    <button
                     type='submit'class="btn btn-success"><i
                      class="bi bi-pencil-square"></i></button></a>  
                     <button type="submit" onclick="return confirm('Are you sure ?')"
-                      class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button></td>
+                      class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+                    </td>
+                  
+
+                  </tr>
+                 
+                </tbody>
+              </table>
+               -->
+                <!-- Table with stripped rows -->
+              <table class="table datatable">
+                <thead>
+                  <tr>
+                    <th scope="col">No</th>
+                    <th scope="col">Article Picture</th>
+                    <th scope="col">Article Heading</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Text</th>
+                    <th scope="col">Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td> <img src="file:///Users/macbook/Documents/laravelz/culinary_workshop_UI/assets/images/blog/blog2.jpg" alt=""></td>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>Pentingnya Nutrisi <br> Seimbang
+                        Dalam kehidupan <br> sehari-hari, 
+                        kita membutuhkan <br>
+                        asupan
+                        yang seimbang untuk...</td>
+                    <td>
+                        
+                    <a href="">
+                    <button
+                    type='submit'class="btn btn-success"><i
+                     class="bi bi-pencil-square"></i></button></a>  
+                    <button type="submit" onclick="return confirm('Are you sure ?')"
+                      class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+                    </td>
                   </tr>
                   <tr>
-                    <th scope="row">2</th>
-                    <td>Bridie Kessler</td>
-                    <td>Developer</td>
-                    <td> <img src="file:///Users/macbook/Documents/laravelz/culinary_workshop_UI/assets/images/dish/2.png" alt=""></td>
-                    <td>100</td>
+                    <td>2</td>
+                    <td> <img src="file:///Users/macbook/Documents/laravelz/culinary_workshop_UI/assets/images/blog/blog2.jpg" alt=""></td>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>Pentingnya Nutrisi <br> Seimbang
+                        Dalam kehidupan <br> sehari-hari, 
+                        kita membutuhkan <br>
+                        asupan
+                        yang seimbang untuk...</td>
                     <td>
-                      <a href=""><button
-                      type='submit'class="btn btn-success"><i
-                       class="bi bi-pencil-square"></i></button></a>  
-                      <button type="submit" onclick="return confirm('Are you sure ?')"
-                        class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button></td>
+                        
+                    <a href="">
+                    <button
+                    type='submit'class="btn btn-success"><i
+                     class="bi bi-pencil-square"></i></button></a>  
+                    <button type="submit" onclick="return confirm('Are you sure ?')"
+                      class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+                    </td>
                   </tr>
                   <tr>
-                    <th scope="row">3</th>
-                    <td>Ashleigh Langosh</td>
-                    <td>Finance</td>
-                    <td> <img src="file:///Users/macbook/Documents/laravelz/culinary_workshop_UI/assets/images/dish/3.png" alt=""></td>
-                    <td>299</td>
+                    <td>3</td>
+                    <td> <img src="file:///Users/macbook/Documents/laravelz/culinary_workshop_UI/assets/images/blog/blog2.jpg" alt=""></td>
+                    <td>Brandon Jacob</td>
+                    <td>Designer</td>
+                    <td>Pentingnya Nutrisi <br> Seimbang
+                        Dalam kehidupan <br> sehari-hari, 
+                        kita membutuhkan <br>
+                        asupan
+                        yang seimbang untuk...</td>
                     <td>
-                      <a href=""><button
-                      type='submit'class="btn btn-success"><i
-                       class="bi bi-pencil-square"></i></button></a>  
-                      <button type="submit" onclick="return confirm('Are you sure ?')"
-                        class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button></td>
+                        
+                    <a href="">
+                    <button
+                    type='submit'class="btn btn-success"><i
+                     class="bi bi-pencil-square"></i></button></a>  
+                    <button type="submit" onclick="return confirm('Are you sure ?')"
+                      class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>
+                    </td>
                   </tr>
-                  <tr>
-                    <th scope="row">4</th>
-                    <td>Angus Grady</td>
-                    <td>HR</td>
-                    <td> <img src="file:///Users/macbook/Documents/laravelz/culinary_workshop_UI/assets/images/dish/4.png" alt=""></td>
-                    <td>17</td>
-                    <td>
-                      <a href=""><button
-                      type='submit'class="btn btn-success"><i
-                       class="bi bi-pencil-square"></i></button></a>  
-                      <button type="submit" onclick="return confirm('Are you sure ?')"
-                        class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button></td>
-                  </tr>
-                  <tr>
-                    <th scope="row">5</th>
-                    <td>Raheem Lehner</td>
-                    <td>Dynamic Division Officer</td>
-                    <td> <img src="file:///Users/macbook/Documents/laravelz/culinary_workshop_UI/assets/images/dish/5.png" alt=""></td>
-                    <td>15</td>
-                    <td>
-                      <a href=""><button
-                      type='submit'class="btn btn-success"><i
-                       class="bi bi-pencil-square"></i></button></a>  
-                      <button type="submit" onclick="return confirm('Are you sure ?')"
-                        class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button></td>
-                  </tr>
+                  
                 </tbody>
               </table>
               <!-- End Table with stripped rows -->
@@ -452,9 +482,9 @@
                       <input type="text" class="form-control" id="productCategory" required>
                   </div>
                   <div class="mb-3">
-                      <label for="productStock" class="form-label">Stock</label>
-                      <input type="number" class="form-control" id="productStock" required>
-                  </div>
+                    <label for="productCategory" class="form-label">Text</label>
+                    <input type="text" class="form-control" id="productCategory" required>
+                </div>
                   <div class="mb-3">
                       <label for="productImage" class="form-label">Product Picture</label>
                       <input type="file" class="form-control" id="productImage" accept="image/*" required>

@@ -37,6 +37,7 @@ img {
     max-width: 100%;
 }
 
+
 /* logo */
 .logo{
 
@@ -56,6 +57,10 @@ img {
     transition: all .50s ease;
  
  }
+ .menu-toggle:hover {
+    background: linear-gradient(145deg, #dcdcdc, #ffffff);
+    box-shadow: 20px 20px 60px #cfcfd0, -20px -20px 60px #ffffff;
+}
 
  span{
     color:var(--main-color);
@@ -166,7 +171,8 @@ ul {
     position: relative;
     margin-left: 20px;
     transition: 0.3s;
-    box-shadow: inset 6px 6px 7px #dadada, inset -6px -6px 7px #ffffff;
+    background-color: var(--text-color);
+    /* box-shadow: inset 5px 3px 5px var(--text-color), inset -6px -6px 7px var(--bg-color); */
     align-items: center;
 }
 
@@ -292,9 +298,18 @@ ul {
     .header-search-form .form-input {
         width: 170px;
     }
+    .main-navigation .menu li{
+        display: ;
+    }
+
 }
 
 @media (max-width: 991px) {
+    .card .checkOut div{
+        height: 50%;
+    }
+   
+    
     .section {
         padding-top: 85px;
         padding-bottom: 85px;
@@ -336,7 +351,7 @@ ul {
         height: 40px;
         transform: translate(0, -50%);
         z-index: 100;
-        box-shadow: inset 6px 6px 7px #dadada, -6px -6px 10px #ffffff;
+        box-shadow: inset -7px 0px 5px #dadada, 1px 1px 5px #ffffff;
         border-radius: 10px;
         padding: 0 8px;
     }
@@ -382,7 +397,7 @@ ul {
         transform: translateY(-100%);
         background-image: url(assets/images/blog-pattern-bg.png);
         background-position: center;
-        background-color: #f3f3f5;
+        background-color: var(--bg-color);
     }
     .main-navigation .menu li {
         display: block;
@@ -409,19 +424,30 @@ ul {
     .main-navigation .menu .sub-menu li a {
         color: #ff8243;
     }
+    .header-btn:hover {
+    box-shadow: 20px 20px 60px #cfcfd0, -20px -20px 60px #ffffff;
+}
     .header-btn.header-cart {
-        display: none;
+        display: list-item;
+        background-color: transparent;
+        box-shadow: inset -7px 0px 5px #dadada, 1px 1px 5px #ffffff;    }
+    
+    .uil-shopping-bag {
+        font-size: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
     }
     .header-btn {
         margin: 0;
         margin-right: 70px;
     }
     .site-header {
-        padding: 20px 0;
-        box-shadow: 0px 10px 55px #d4d4d4;
+        padding: 30px 0;
+        box-shadow: 0px 10px 55px black;
     }
     .site-header.sticky_head, .site-header {
-        background: rgb(255 255 255 / 90%);
+        padding: 5px 0;
+        background: rgba(6, 6, 6, 0.9 /50%);
     }
     body {
         height: auto !important;
@@ -429,6 +455,7 @@ ul {
 }
 
 @media (max-width: 575px) {
+    
     .container, .container-fluid {
         padding: 0 30px;
     }
@@ -651,6 +678,12 @@ p {
     position: relative;
 }
 
+.sec-img img{
+    margin-top: 20px;
+    min-width: 40vw;
+    max-width: 50vw;
+}
+
 .sec-sub-title {
     text-transform: uppercase;
     display: inline-block;
@@ -813,10 +846,8 @@ p {
     box-shadow: 2px 5px 8px var(--main-color), -9px -9px 12px var(--bg-color);
     display: flow-root;
     padding: 0 10px 20px;
-    padding-top: 0;
-
-    margin: 20px ; /* Atur margin antar kotak */
-    transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
+    margin: 150px 20px 10px 20px ; /* Atur margin antar kotak */
+    transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02); 
 }
 
 .dish-box:hover {
@@ -824,7 +855,7 @@ p {
 }
 
 .dist-img {
-    margin-top: 20px;
+    margin-top: 30px;
     margin-bottom: 30px;
 }
 
@@ -894,7 +925,7 @@ p {
 }
 
 .dish-info, .dist-bottom-row {
-    padding: 0 30px;
+    padding: 0 10px;
 }
 
 .dish-info {
@@ -1484,7 +1515,6 @@ p {
     align-items: center;
     border-radius: 50%;
     background: #f3f3f5;
-    box-shadow: 9px 9px 12px #b2b2b3, -9px -9px 12px #ffffff;
     color: #ff8243;
     font-size: 26px;
     transition: 0.8s cubic-bezier(0.22, 0.78, 0.45, 1.02);
@@ -1543,6 +1573,27 @@ p {
     .banner-img-wp {
         height: 360px;
     }
+    .history-detail{
+        padding-bottom:  40vh  ;
+        gap: 30vw;
+    }
+    .history-cards{
+        min-height: 80vh;
+
+    }
+    .history-cards p{
+        font-size: 12px;
+    }
+    .history-cards b{
+        font-size: 13px;
+    }
+    .history-list span{
+        font-size: 7px;
+    }
+    .history-list img{
+        max-width: 30px;
+    }
+
     .dish-box {
         padding: 0 0 40px;
     }
@@ -1600,6 +1651,8 @@ p {
     .menu-img {
         width: 140px;
     }
+
+    
 }
 
 @media (max-width: 991px) {
@@ -1736,9 +1789,16 @@ p {
         position: relative;
         display: flex;
     }
+    .sec-img img{
+        margin: 20px 0 20px;
+        width: 70vw;
+    }
 }
 
 @media (max-width: 767px) {
+    .card{
+        width: 100%;
+    }
     .banner-img-wp {
         height: 75vw;
         min-height: 60vw;
@@ -1754,7 +1814,12 @@ p {
         margin-bottom: 60px;
     }
     .dish-box {
-        margin: 80px 0 30px;
+        
+        margin: 80px 10px 100px;
+    }
+    .dist-bottom-row ul li {
+       flex-flow: column;
+       gap: 10px;
     }
     .book-table-img {
         min-height: 340px;
@@ -1779,6 +1844,10 @@ p {
     }
     .menu-tab ul li {
         padding: 10px 20px;
+    }
+    .sec-img img{
+        margin-top: 20px;
+        max-width: 80vw;
     }
 }
 
@@ -1900,17 +1969,17 @@ p {
     position: fixed;
     top:0;
     left: 100%;
-    width: 500px;
+    width: 390px;
     background-color: #111111;
     height: 100vh;
     transition: 0.5s;
     z-index: 105;
+
 }
-
-
 .active .card{
-    left: calc(100% - 500px);
+    left: calc(100% - 390px);
 }
+
 .active .container{
    transform: translateX(-200px);
 }
@@ -1926,16 +1995,17 @@ justify-content: center;
 text-align: center;
 }
 .card .checkOut{
-    position: absolute;
     bottom: 0;
     width: 100%;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 .card .checkOut div{
+    border-radius: 30px;
     background-color: #E8BC0E;
-    width: 100%;
+    width: 50%;
     height: 70px;
     display: flex;
     justify-content: center;
@@ -1944,9 +2014,13 @@ text-align: center;
     cursor: pointer;
 }
 .card .checkOut div:nth-child(2){
+    height: 60px;
+    width: 40%;
+    margin: 15px;
     background-color: #1C1F25;
     color: #fff;
 }
+
 
 .listCard{
     height: 350px;
@@ -2162,8 +2236,8 @@ p.lead {
 }
 
 #content-wrap .primary-content {
-	padding-left: 6rem;
-	padding-right: 6rem;
+	padding-left: 8rem;
+	padding-right: 12rem;
 }
 
 #content-wrap .primary-content img {
@@ -2236,5 +2310,144 @@ p.lead {
 /* Form Field */
 .form-field {
     margin-bottom: 1.5rem; /* Tambahkan jarak antara elemen input */
+}
+
+
+/* history page */
+
+.history-content{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 100px 0 100px;
+}
+
+.history-content .history-detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 30px;
+    height: 100%;
+    width: 70%;
+    box-shadow: 2px 5px 8px var(--main-color), -9px -9px 12px var(--bg-color);
+
+    
+}
+
+.history-content .history-detail .history-cards{
+    height: 40vw;
+    display: flex;
+    flex-direction: column;
+    max-width: 50vh ;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 30px;
+    background-color: rgba(105, 94, 94, 0.218);
+    box-shadow: 2px 5px 8px var(--main-color), -9px -9px 12px var(--bg-color);
+    opacity: 30;
+}
+
+.history-content .history-detail .history-cards img{
+    margin-top: 10px;
+    width: 50px;
+    height: auto;
+}
+
+.history-content .history-detail .history-cards .history-list{
+    padding:20px 20px 30px 20px;
+    height: auto;
+    background-color: var(--text-color);
+    border-radius: 10px;
+    overflow-y: scroll;
+    box-shadow: 15px 5px 8px 7px rgba(0, 0, 0, 0.168), -9px -9px 12px var(--bg-color);
+
+}
+
+.history-content .history-detail .history-cards .history-list span{
+    color: var(--bg-color);
+}
+
+.history-list::-webkit-scrollbar {
+    width: 3px;
+    background-color: transparent;
+    z-index: 3;
+    
+}
+    
+ .history-list::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 5px;
+}
+
+.history-content .history-detail .history-cards b{
+    margin-top: 5px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+.history-list img{
+    border-radius: 50%;
+    box-shadow: 2px 5px 8px var(--bg-color);
+
+}
+.history-content .history-detail .history-cards p{
+    margin-top: 1px;
+    margin-bottom: 1px;
+}
+
+.history-content .history-detail .history-cards .history-status{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+
+}
+
+.history-content .history-detail .history-cards .history-status button{
+    margin-top: 20px;
+    background-color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vh;
+    height: 50px;
+    border-radius: 30px;
+    
+}
+
+.history-content .history-detail .history-cards .history-status button {
+    margin-top: 20px;
+    background-color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vh;
+    height: 50px;
+    border-radius: 30px;
+    
+}
+
+.history-content .history-detail .history-cards .history-status button:hover{
+background-color: var(--main-color);
+transform: translateY(10px);
+transition: all .50s ease;
+color: var(--text-color);
+}
+
+.card .checkOut.checkOut .closeShopping:hover {
+    color: var(--bg-color);
+    background-color: var(--text-color);
+    transform: translateY(10px);
+    transition: all .50s ease;
+}
+
+.card .checkOut.checkOut .total:hover {
+    color: var(--main-color);
+    box-shadow: 2px 5px 8px var(--main-color), -9px -9px 12px var(--bg-color);
+    background-color: #000000;
+    transform: translateY(-10px);
+    transition: all .50s ease;
 }
 
