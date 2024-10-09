@@ -251,6 +251,7 @@ h6 {
 }
 
 .card-body {
+  background-image: url(file:///Users/macbook/Documents/laravelz/culinary_workshop_UI/assets/images/blog-pattern-bg.png);
   padding: 0 20px 20px 20px;
 }
 
